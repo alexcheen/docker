@@ -1,0 +1,5 @@
+wget https://raw.githubusercontent.com/jamtur01/dockerbook-code/master/code/5/sample/nginx/global.conf
+wget https://raw.githubusercontent.com/jamtur01/dockerbook-code/master/code/5/sample/nginx/nginx.conf
+wget https://raw.githubusercontent.com/jamtur01/dockerbook-code/master/code/5/sample/website/index.html
+
+sudo docker run -d -p 80:80 --name website -v $PWD/website:/var/www/html/website alex/nginx nginx
